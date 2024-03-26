@@ -1,0 +1,490 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 140%;
+}
+ul{ list-style-type: none; padding: 0; margin: 0;}
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+.hidden{display: none; visibility: hidden;}
+button{cursor: pointer;}
+
+/*Mobile*/
+@media only screen and (max-width: 600px){
+    .profile-txt{ 
+        display: none;
+        margin-right: 0;
+    }
+    
+    .profile-dc{
+        padding: 0;
+        margin: 0;
+    }
+    
+    #profile-btn{
+        height: 32px;
+        max-height: 32px;
+        padding: 2px;
+    }
+    #profile-btn:hover{
+        border-color: #616161;
+        background-color: #616161;
+
+    }
+    #profile-btn:active{
+        background-color: #656266;
+    }
+    #profile-btn:focus{
+        outline: 2px solid #005BD3;
+        outline-offset: 1px;
+    }
+    
+    #main{
+        margin: 0;
+        width: 100%;
+    }
+    
+    
+    .ad{
+        display: inline-block;
+        margin: 5px 0;
+        font-size: 14px;
+        width: 100%;
+        position: absolute;
+        top: 12%;
+        left: 0px;
+        right: 0px;
+        
+        border-radius: 0;
+    }
+    #closeAd{
+        width: 20;
+        height: 20;
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+    
+    .dashboard{
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 30%;
+        left: 0px;
+        right: 0px;
+        
+        border-radius: 0;
+    } 
+    
+    #menu{
+        position: absolute;
+        width: 320px;
+        top: 10%;
+        right: 16px;
+        z-index: 1;
+    }
+    
+    #notif-menu{
+        z-index: 2;
+    }
+    
+    .shopifyFull{
+        display: none;
+    }
+    
+    #profile-btn{
+        width: auto;
+        height: auto;
+        cursor: pointer;
+     /*T R B L*/
+    
+        display: inline-flex;
+        color: floralwhite;
+        background-color: #353535;
+        border: 1px solid #353535;
+        border-radius: 8px;
+    }
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes halfspin{
+    from{
+        transform: rotate(300deg);
+        opacity: 0.5;
+    }
+    to{
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomin{
+    from{
+        transform: scale(0) rotate(270deg);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/*Desktops*/
+@media only screen and (min-width: 768px){
+    .dashboard{
+        border-radius: 15px;
+    }
+    
+    .ad{
+        display: inline-flex;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+    }
+    
+    .shopifyLogo{
+        display: none;
+    }
+    
+    #profile-btn{
+        width: auto;
+        height: 32px;
+        max-height: 32px;
+        cursor: pointer;
+    
+        padding: 2px 2px 2px 8px; /*T R B L*/
+    
+        display: inline-flex;
+        color: floralwhite;
+        background-color: #353535;
+        border: 1px solid #353535;
+        border-radius: 8px;
+        transition: all .1s;
+    }
+    #profile-btn:hover{
+        border-color: #616161;
+        background-color: #616161;
+
+    }
+    #profile-btn:active{
+        background-color: #656266;
+    }
+    #profile-btn:focus{
+        outline: 2px solid #005BD3;
+        outline-offset: 1px;
+    }
+    
+    .ad p{
+        margin-bottom: 2px;
+    }
+}
+
+/*Non-device Specific*/
+nav{
+    width: 100%;
+    height: auto;
+    padding: 16px 16px;
+    overflow-x: hidden;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    color: #E3E3E3;
+    background-color: #1A1A1A;
+    box-sizing: border-box;
+}
+
+nav input[name=searchbar]{
+    width: 50%;
+    height: 50%;
+    max-height: 32px;
+    margin: 0; /*auto*/
+    padding: 8px;
+    
+    color: floralwhite;
+    background-color: #353535; /*darkslategray;*/
+    font-size: 13px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 9px;
+}
+
+nav input[name=searchbar]:focus{
+    outline: 2px solid #005BD3;
+    outline-offset: 1px;
+}
+
+#notification{
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin-right: 8px;
+    
+    border-radius: 12px;
+    border-style: groove;
+    background-color: #303030;
+    transition: all 0.1s ease-in;
+    /*svg-size: 20x20*/
+}
+
+#notification:hover{
+    background-color: #616161;
+}
+#notification:active{
+    background-color: #656266;
+}
+#notification:focus{
+    outline: 2px solid #005BD3;
+    outline-offset: 1px;
+}
+
+
+.profile-txt{
+    margin:auto; 
+    margin-right: 10px;
+}
+.profile-dc{
+    height: 100%;
+    padding: 3px;
+    
+    color: black 40%;
+    background-color: #36FBA1;
+    border: 2px solid #36FBA1;
+    border-radius: 6px;
+}
+
+#menu{
+    position: absolute;
+    width: 320px;
+    top: 10%;
+    right: 16px;
+    padding: : 6px 2px;
+    
+    color: #303030;
+    background-color: white;
+    font-size: 14px;
+    border: 1px solid #DBDBDB;
+    border-radius: 14px;
+    
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0, 0.05);
+}
+
+#menu a{
+    color: black;
+    text-decoration: none;
+}
+
+#menu hr{
+    margin: 4px 0;
+}
+
+#menu li{
+    padding: 5px;
+    margin: 5px;
+}
+
+#menu li[role=presentation]:hover{
+    background-color: #F7F7F7;
+    border-radius: 5px;
+}
+
+#menu li:active{
+    background-color: #F0F0F0;
+    border-radius: 5px;
+}
+
+#notif-menu{
+    position: absolute;
+    width: 320px;
+    top: 10%;
+    right: 16px;
+    padding: : 6px 2px;
+    
+    color: #303030;
+    background-color: white;
+    font-size: 14px;
+    border: 1px solid #DBDBDB;
+    border-radius: 14px;
+    
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0, 0.05);
+}
+
+#main{
+    margin: auto;
+    width: 60%;
+}
+
+h1, h2, h3, h4, h5, h6{line-height: 140%;}
+h3, p{margin: 0;}
+
+button[role="tab"]{
+    border: none;
+    width: 100%;
+    height: 32px;
+    padding: 0px 10px;
+    
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    background-color: transparent;
+    transition: all 0.1s ease-in;
+}
+
+.ad{
+    color: #E3E3E3;
+    background-color: black;
+    padding: 15px 10px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 800px;
+    
+    justify-content: space-between;
+}
+.ad p{
+    display: flex;
+    align-items: center;
+}
+#closeAd{
+    border: none;
+    background-color: transparent;
+}
+
+.dashboard{
+    max-width: 800px;
+    background-color: white;
+    padding: 2px 10px 5px;
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0, 0.05);
+}
+
+.dashboard li{
+    transition: all 0.1s ease-in;
+}
+
+#guide{
+    transition: all 0.2s ease-in;
+}
+#guide li{
+    margin: 5px;
+}
+#guideBtn{
+    border: none;
+    background-color: transparent;
+}
+#guideBtn:focus{
+    border-radius: 8px;
+    outline: 2px solid #005BD3;
+    outline-offset: 1px;
+}
+
+.tablink{
+    color: #005BD3;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.up{
+    animation-duration: .3s;
+    animation-name: halfspin;
+    animation-timing-function: linear;
+}
+.down{
+    animation-duration: .3s;
+    animation-name: halfspin;
+    animation-timing-function: linear;
+}
+
+.checkcircle{
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    
+    background-color: transparent; 
+    border: none;
+    border-radius: 12px;
+    transition: all 0.1s ease-in;
+}
+
+.checkcircle:hover circle{
+    stroke-dasharray: 0 0;
+    transition: all 0.1s ease-in;
+}
+
+.checkcircle:focus{
+    outline: 2px solid #005BD3;
+    outline-offset: 1px;
+}
+
+.checkcircle:focus .not-done circle{
+    fill: #D9D9D9;
+    stroke-dasharray: 0 0;
+}
+
+.checklist-header{
+    display: inline-flex;
+    width: 100%;
+    transition: all 0.1s ease-in;
+}
+
+.checklist-item{
+    margin-left: 40px;
+    transition: all 0.1s ease-in;
+}
+
+.checked{
+    animation-duration: 3s;
+    animation-name: zoomin;
+    animation-timing-function: linear;
+}
+.loading-check{
+    animation-duration: 1s;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.list-btn{
+    padding: 4px;
+    color: #F1F1F1;
+    background-color: #322F33;
+    border-style: groove;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0, 0.05);
+}
+
+.tab-selected{
+    background-color: #F1F1F1;
+    border-radius: 5px;
+}
+
+.selectplan{
+    height: 32px; 
+    background-color: #fff; 
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    
+    transition: all 0.1s ease-in;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0, 0.05);
+}
+.selectplan:hover{ 
+    background-color: #F7F7F7; 
+}
+.selectplan:active{ 
+    background-color: #F0F0F0; 
+}
